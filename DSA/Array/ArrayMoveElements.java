@@ -33,6 +33,8 @@ public class ArrayMoveElements {
         for (int i = 0; i < myArray.length; i++) {
             System.out.println("At position " + myArray[i]);
         }
+
+        // Closing for Avoid the Memory leak 
         scan.close();
 
     }
