@@ -1,28 +1,37 @@
-class RotateArrayByK {
+public class RotateArrayByK {
 
-/*
-     🧪 Example:
-     Input:
-     arr = [1, 2, 3, 4, 5], k = 2
+    /*
+        Rotates an array to the right by k positions.
+        
+        Example:
+        Input:
+            arr = [1, 2, 3, 4, 5], k = 2
+        Output:
+            [4, 5, 1, 2, 3]
+    */
 
-     Output:
-     [4, 5, 1, 2, 3]
-*/
-
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
 
         int[] arr = new int[] { 1, 2, 3, 4, 5 };
         int k = 6;
 
+        // Handle cases where k > arr.length
+        k = k % arr.length;
+
+        // Create a result array to store rotated values
         int[] resultArr = new int[arr.length];
 
-        for (int m = 0; m < arr.length; m++) {
-            resultArr[(m + k )% arr.length] = arr[m];
+        // Core logic: Place each element at its new index
+        for (int i = 0; i < arr.length; i++) {
+            resultArr[(i + k) % arr.length] = arr[i];
         }
 
-        for (int o : resultArr) {
-            System.out.print(o);
+        // Print the rotated array
+        System.out.print("Rotated Array: [");
+        for (int i = 0; i < resultArr.length; i++) {
+            System.out.print(resultArr[i]);
+            if (i < resultArr.length - 1) System.out.print(", ");
         }
-
+        System.out.println("]");
     }
 }
