@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class MoveZeroes {
 
     // LEEDCODE https://leetcode.com/problems/move-zeroes/
@@ -9,6 +10,8 @@ public class MoveZeroes {
     }
 
     public static void moveZeroes(int[] nums) {
+
+        System.out.println("Start :"+ Arrays.toString(nums));
 
         int pos = 0;
 
@@ -23,6 +26,9 @@ public class MoveZeroes {
             nums[pos] = 0;
             pos++;
         }
+
+        System.out.println("End :"+Arrays.toString(nums));
+
        
     }
 
