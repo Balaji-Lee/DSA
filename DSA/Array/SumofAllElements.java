@@ -1,3 +1,4 @@
+package DSA.array;
 public class SumofAllElements {
 
     public static void main(String[] arg) {

@@ -1,3 +1,4 @@
+package DSA.array;
 public class CountOddAndEvenNumber {
 
     public static void main(String[] arg) {

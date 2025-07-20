@@ -1,3 +1,4 @@
+package DSA.array;
 public class SecondLargestNumberInAnArray {
 
     public static void main(String[] arg) {

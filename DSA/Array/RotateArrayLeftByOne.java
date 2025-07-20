@@ -1,3 +1,4 @@
+package DSA.array;
 class RotateArrayLeftByOne {
 
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package DSA.array;
 public class BestTimeToBuyAndSellStock {
 
     // LEETCODE 

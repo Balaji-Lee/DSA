@@ -1,3 +1,4 @@
+package DSA.array;
 import java.util.Arrays;
 public class MoveZeroes {
 

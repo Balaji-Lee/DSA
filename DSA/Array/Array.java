@@ -1,5 +1,5 @@
+package DSA.array;
 import java.util.Scanner;
-
 public class Array {
 
     /*

@@ -1,3 +1,4 @@
+package DSA.array;
 public class RotateArrayRightByOne {
 
     public static void main(String[] arg){

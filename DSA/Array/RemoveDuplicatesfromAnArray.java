@@ -1,4 +1,5 @@
 
+package DSA.array;
 import java.util.ArrayList;
 
 class RemoveDeplicatesfromAnArray{
