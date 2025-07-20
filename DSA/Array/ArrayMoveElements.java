@@ -1,4 +1,5 @@
 package DSA.array;
+
 import java.util.Scanner;
 
 public class ArrayMoveElements {
@@ -29,13 +30,13 @@ public class ArrayMoveElements {
             myArray[i] = myArray[i - 1];
         }
 
-        myArray[pos] =newvale;
+        myArray[pos] = newvale;
 
         for (int i = 0; i < myArray.length; i++) {
             System.out.println("At position " + myArray[i]);
         }
 
-        // Closing for Avoid the Memory leak 
+        // Closing for Avoid the Memory leak
         scan.close();
 
     }
