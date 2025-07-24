@@ -18,13 +18,16 @@ public class ValidMountainArray {
 
         int p = 0;
 
+        // Walk up (increasing slope)
         while (p + 1 < n && arr[p] < arr[p + 1]) {
             p++;
         }
 
+        // Peak can't be first or last
         if (p == 0 || p == n - 1)
             return false;
 
+        // Walk down (decreasing slope)
         while (p + 1 < n && arr[p] > arr[p + 1]) {
             p++;
         }
