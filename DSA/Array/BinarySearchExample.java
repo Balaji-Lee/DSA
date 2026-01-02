@@ -1,34 +1,32 @@
-package DSA.array;
+package DSA.Array;
 public class BinarySearchExample {
 
     public static void main(String[] arg) {
-        int[] myArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 22 };
-        int targetVal = 8;
-        boolean found = false;
-        int low = 0;
-        int high = myArray.length - 1;
 
-        int pos=0;
 
-        System.out.println("Started");
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (myArray[mid] == targetVal) {
-                found = true;
-                pos =mid;
-                break;
-            } else if (myArray[mid] < targetVal) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
+        int[] arr = {1, 2, 44, 55, 88, 99, 112};
+        int target = 55;
+
+        int targetPosition =findPosition(arr, target);
+        System.out.println("Target Position :" + targetPosition);
+    }
+
+    public static int findPosition(int[] array , int targetVal){
+
+        int left = 0;
+        int right = array.length-1;
+
+        while( left <= right){
+            int mid = (left + right) / 2;
+            if(array[mid] == targetVal){
+                return mid;
+            }else if (array[mid] < targetVal){
+                left = mid + 1;
+            }else{
+                right = mid - 1;
             }
         }
-
-        if (!found) {
-            System.out.println("❌ Value not found in the array.");
-        } else {
-            System.out.println(" found in the array at index:"+pos);
-        }
-
+        return 0;
     }
+
 }
