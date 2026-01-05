@@ -1,4 +1,3 @@
-package DSA.basic;
 
 public class EvenOrOdd {
     public static void main(String[] arg){
