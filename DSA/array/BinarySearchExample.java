@@ -1,4 +1,4 @@
-package DSA.Array;
+package DSA.array;
 public class BinarySearchExample {
 
     public static void main(String[] arg) {
