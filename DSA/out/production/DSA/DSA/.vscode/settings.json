@@ -1,7 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "basic",
-        "collections"
-    ],
-    "java.debug.settings.onBuildFailureProceed": true
-}
