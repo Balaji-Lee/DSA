@@ -1,4 +1,7 @@
 package DSA.array;
+
+import java.util.Arrays;
+
 public class RotateArrayByK {
 
     /*
@@ -13,26 +16,32 @@ public class RotateArrayByK {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[] { 1, 2, 3, 4, 5 };
-        int k = 6;
+        int[] arr  = new int[]{1, 2, 3, 4, 5};
+        int k =2;
 
-        // Handle cases where k > arr.length
-        k = k % arr.length;
+        rotate(arr, k);
 
-        // Create a result array to store rotated values
-        int[] resultArr = new int[arr.length];
+        System.out.println(Arrays.toString(arr));
+    }
 
-        // Core logic: Place each element at its new index
-        for (int i = 0; i < arr.length; i++) {
-            resultArr[(i + k) % arr.length] = arr[i];
+    public static void rotate(int[] nums, int k) {
+        int length = nums.length;
+        if(length == 0){
+            return ;
         }
+        int rotate = k % nums.length;
+        revers(nums, 0, length-1);
+        revers(nums, 0, rotate-1);
+        revers(nums, rotate , length-1);
+    }
 
-        // Print the rotated array
-        System.out.print("Rotated Array: [");
-        for (int i = 0; i < resultArr.length; i++) {
-            System.out.print(resultArr[i]);
-            if (i < resultArr.length - 1) System.out.print(", ");
+    public static void revers(int[] nums, int start, int end){
+        while(start < end){
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start ++;
+            end --;
         }
-        System.out.println("]");
     }
 }
