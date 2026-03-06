@@ -1,4 +1,8 @@
 package DSA.array;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum {
     /*
      * Given an array of integers nums and an integer target, return indices of the
@@ -17,20 +21,20 @@ public class TwoSum {
 
         int[] nums = new int[] { 2, 7, 11, 5 };
         int k = 9;
-        int[] result = new int[2];
 
+        // Solution
+        Map<Integer, Integer> store = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            for (int j =i+1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == k) {
-                    result[0] = nums[i];
-                    result[1] = nums[j];
-                    break;
-                }
-            }
+
+           int completed = k-nums[i];
+           if(store.containsKey(completed)){
+               System.out.println("The Values are " + completed + " and " + nums[i] +
+                       " And the Index are" + store.get(completed)+" And" + i);
+           }
+           store.put(nums[i], i);
+
         }
-        for(int l: result){
-            System.out.print(l+"+");
-        }
+
 
     }
 
